@@ -1,0 +1,118 @@
+<!-- <p>dashboard works!</p> -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm3 col-3" style="margin-top: 5px;">
+                Dashboard
+            </div>
+            <div class="col-md-9 col-sm-9 col-9 text-end">
+                <div class="menu">
+                    <ul>
+                        <li><button type="button" class="btn" (click)="signOut()">
+                            <i class="fa fa-sign-out"></i>Sign Out
+                          </button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Navbar</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+
+            
+          </div>
+        </div>
+      </nav> -->
+<div class="container">
+
+    
+
+      <div class="row"></div>
+
+
+    <div class="row" >
+        
+        
+        <div class="col-sm-6">
+            <h2>Overview</h2>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Doughnut Chart</h5>
+              <canvas id="canvas" height="390px" width="390px">{{chart}}</canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6" style="margin-top:50px ;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Bar Chart</h5>
+              <canvas id="canvas2" height="390px" width="390px" >{{chart}}</canvas>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+<div class="row">
+ <div class="col-sm-12">
+        <div class="card-body">
+            <h5 class="card-title">User List</h5>
+            <div class="table-responsive" >
+                <table class="table table-bordered" style="width:100% ">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    
+                    <ng-container *ngFor="let user of users; let i = index">
+                        <tr class="border_bottom">
+                            <td>
+                                <h2>{{i+1}}</h2>
+                            </td>
+                            <td class="border_bottom">
+                                <h2>{{user.firstName}}</h2>
+                            </td>
+                            <td class="border_bottom">
+                                <h2>{{user.lastName}}</h2>
+                            </td>
+                            <td class="border_bottom">
+                                <h2>{{user.username}}</h2>
+                            </td>
+                        </tr>
+                    
+                    </ng-container>
+               </table>
+              </div>
+      </div>
+
+    
+</div>
+</div>
+  </div>
+
+
